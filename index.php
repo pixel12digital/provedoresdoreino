@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anel de Salomão</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-desktop desktop-only">
+            <img src="assets/images/header.png" alt="O Anel de Salomão - Desktop" class="header-img-desktop">
+        </div>
+        <div class="header-mobile mobile-only">
+            <div class="header-mobile-container">
+                <div class="header-mobile-anel header-mobile-anel-fem">
+                    <img src="assets/images/anel-feminino.png" alt="Anel Feminino">
+                    <div class="header-mobile-label">FEMININO</div>
+                </div>
+                <div class="header-mobile-center">
+                    <div class="header-mobile-title">O Anel de <span>SALOMÃO</span></div>
+                    <div class="header-mobile-sub">OS PROVEDORES DO REINO</div>
+                </div>
+                <div class="header-mobile-anel header-mobile-anel-masc">
+                    <img src="assets/images/anel-masculino.png" alt="Anel Masculino">
+                    <div class="header-mobile-label">MASCULINO</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="doacao-container">
+        <a href="#" class="btn-doacao">
+            <span class="icon-lupa">
+                <img src="assets/images/lupa.svg" alt="Lupa" class="img-lupa">
+            </span>
+            <span class="btn-text">CLICK AQUI PARA FAZER A SUA DOAÇÃO</span>
+        </a>
+    </div>
+    <section class="info-section">
+        <div class="faixa-vermelha">
+            <div class="faixa-vermelha-conteudo">
+                Saiba como fazer, para receber o Anel de Salomão.
+            </div>
+        </div>
+        <div class="info-box">
+            <div class="info-alert">ATENÇÃO:</div>
+            <div class="info-text">
+                Assim que você fizer a sua <span class="info-blue">1º DOAÇÃO</span> nos envie o Comprovante pelo <span class="info-red">WHASTAPP (11) 97477-8796</span><br>
+                escrevendo os seguintes dados:<br>
+                <span class="info-blue">Nome e Endereço Completo para enviarmos o seu Anel. e indique se o Anel é Masculino ou Feminino.</span>
+            </div>
+        </div>
+    </section>
+    <section class="video-instrucoes-section">
+        <div class="video-box">
+            <div class="video-title">ASSISTA AO VÍDEO</div>
+            <div class="video-area">
+                <video src="assets/videos/video-explicativo01.mp4" controls style="width:100%;height:100%;object-fit:cover;"></video>
+            </div>
+        </div>
+        <div class="instrucoes-box">
+            <div class="instrucoes-title">INSTRUÇÕES<br>DE COMO SE PROCEDER</div>
+            <ol class="instrucoes-list">
+                <li><span>Como Provedor do Reino, você vai fazer uma Doação Mensal no valor de R$ 100,00 (Cem Reais), durante 12 meses</span></li>
+                <li><span>Você pode escolher em fazer a sua Doação via PIX ou pelo Cartão de Crédito.</span></li>
+                <li><span>Nos envie o comprovante da sua doação junto com o seus dados pessoais.</span></li>
+            </ol>
+        </div>
+    </section>
+    <section class="agradecimento-section">
+        <div class="agradecimento-content agradecimento-linha">
+            <div class="agradecimento-pastor">
+                <img src="assets/images/imagem01.png" alt="Pr. Hideraldo Pagliarin" class="pastor-img">
+            </div>
+            <div class="agradecimento-bloco-direita">
+                <div class="agradecimento-titulo">
+                    OBRIGADO POR VOCÊ TER ACESSADO ESTE SITE
+                </div>
+                <div class="agradecimento-texto agradecimento-azul">
+                    <div class="agradecimento-texto-main">
+                        Este <span class="destaque-amarelo">Lindo Anel</span> é um <span class="destaque-amarelo">PRESENTE</span><br>
+                        por você ter se associado ao PROJETO:<br>
+                        <span class="destaque-amarelo">"Os Provedores do Reino"</span><br><br>
+                        Este Anel era conhecido como o Selo de Salomão.<br><br>
+                        Ele usava no dedo indicador simbolizando Força e Proteção Divina.<br><br>
+                        <span class="destaque-amarelo">E ESTE ANEL PODE SER SEU!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="jesus-video-section" style="margin-top: 48px;">
+        <div class="jesus-video-container">
+            <div class="jesus-col jesus-img-col">
+                <img src="assets/images/jesus.png" alt="Jesus" class="jesus-img" style="width:100%;height:auto;max-width:500px;display:block;margin:0 auto;">
+            </div>
+            <div class="jesus-col jesus-video-col">
+                <div class="jesus-video-title">Explicação porque você precisa se associar!</div>
+                <div class="jesus-video-box"></div>
+            </div>
+        </div>
+    </section>
+    <section class="anel-livro-section" style="margin-top: 48px;">
+        <div class="anel-livro-container">
+            <div class="anel-livro-col anel-livro-texto-esq">
+                <div class="anel-livro-texto">
+                    O Anel de Salomão de Luxo é fabricado por especialistas!<br>
+                    Feito em Moeda Antiga, Ajustável, Cravejados com Pedras de Zircônio.<br>
+                    Nós temos este belo Anel em duas versões: Masculino e Feminino.
+                </div>
+            </div>
+            <div class="anel-livro-col anel-livro-video-col">
+                <div class="anel-livro-video-box"></div>
+            </div>
+            <div class="anel-livro-col anel-livro-texto-dir">
+                <div class="anel-livro-texto">
+                    Assim que você se Associar ao Projeto: "Os Provedores do Reino" o seu nome vai estar neste Livro onde eu Pr. Hideraldo Pagliarin estarei orando por você e por toda a sua família.
+                </div>
+            </div>
+            <div class="anel-livro-col anel-livro-img-col">
+                <img src="assets/images/livro.png" alt="Livro Ouro de Oração" class="anel-livro-img">
+            </div>
+        </div>
+    </section>
+    <section class="provedores-section" style="margin-top: 48px;">
+        <div class="provedores-container">
+            <img src="assets/images/provedores.png" alt="Provedores do Reino" class="provedores-img" style="display:block;margin:0 auto;max-width:100%;height:auto;">
+        </div>
+    </section>
+    <section class="areas-section" style="margin-top: 32px;">
+        <div class="areas-container">
+            <div class="areas-title">
+                Como Associado ao Projeto "Os Provedores do Reino" você vai nos ajudar a Investir Financeiramente nas seguintes áreas:
+            </div>
+            <div class="areas-listas">
+                <ul class="areas-list">
+                    <li><span class="check-icon">✅</span> Programação de Rádio</li>
+                    <li><span class="check-icon">✅</span> Ganhar Almas Para o Reino</li>
+                    <li><span class="check-icon">✅</span> Impressos Evangelisticos</li>
+                </ul>
+                <ul class="areas-list">
+                    <li><span class="check-icon">✅</span> Pregação da Palavra</li>
+                    <li><span class="check-icon">✅</span> Inaugurações de Igrejas</li>
+                    <li><span class="check-icon">✅</span> Conteúdos Para Internet</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Conteúdo principal aqui -->
+    </main>
+
+    <footer>
+        <p>&copy; <?php echo date('Y'); ?> Anel de Salomão. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 
