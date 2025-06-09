@@ -40,16 +40,17 @@ body {
     letter-spacing: 2px;
     box-shadow: none;
     border: none;
-    transition: background 0.2s;
+    transition: all 0.3s ease;
     gap: 20px;
     height: 70px;
-    min-width: 630px;
+    min-width: 400px;
     justify-content: center;
     line-height: 1;
 }
 
 .btn-doacao:hover {
     background: #b40606;
+    transform: scale(1.05);
 }
 
 .icon-lupa {
@@ -99,6 +100,80 @@ body {
         width: 18px;
         height: 18px;
     }
+    .instrucoes-box {
+        padding: 7vw 4vw 7vw 4vw !important;
+        min-height: 60vw !important;
+        height: auto !important;
+        max-height: none !important;
+        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4vw;
+    }
+    .instrucoes-title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4vw !important;
+        font-size: 6vw !important;
+        line-height: 1.15;
+    }
+    .instrucoes-list {
+        width: 100%;
+        text-align: left;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+        font-size: 4.2vw !important;
+        line-height: 1.25;
+    }
+    .instrucoes-list li {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 0 !important;
+        word-break: break-word;
+    }
+    .agradecimento-titulo {
+        font-size: 22px !important;
+        text-align: center !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+        display: block !important;
+    }
+    .agradecimento-content.agradecimento-linha {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 18px !important;
+    }
+    .agradecimento-pastor, .agradecimento-bloco-direita {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin-top: 0 !important;
+    }
+    .anel-livro-img {
+        width: 440px !important;
+        height: auto !important;
+        max-width: 90vw !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    .anel-livro-texto-esq .anel-livro-texto,
+    .anel-livro-texto-dir .anel-livro-texto {
+        font-size: 23.4px !important; /* 18px (mobile base) * 1.3 = 23.4px */
+        line-height: 1.18 !important;
+        text-align: left !important;
+    }
+    .agradecimento-pastor {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+    }
 }
 
 .info-section {
@@ -141,6 +216,12 @@ body {
     font-weight: bold;
     margin-bottom: 16px;
     margin-top: 0;
+    animation: simpleFade 1.2s infinite alternate;
+}
+
+@keyframes simpleFade {
+    0% { opacity: 1; }
+    100% { opacity: 0.6; }
 }
 
 .info-text {
@@ -317,7 +398,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     gap: 32px;
     max-width: 1370px;
     margin-left: auto;
@@ -328,9 +409,9 @@ body {
 }
 
 .agradecimento-pastor {
-    width: 420px;
-    min-width: 420px;
-    max-width: 420px;
+    width: 504px;
+    min-width: 504px;
+    max-width: 504px;
     height: 100%;
     background: none;
     display: flex;
@@ -338,11 +419,14 @@ body {
     justify-content: center;
     padding: 0;
     margin-top: 32px;
+    margin-right: 20px;
 }
 
 .pastor-img {
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
+    max-width: none;
+    max-height: none;
     object-fit: cover;
     display: block;
     border: none;
@@ -360,16 +444,13 @@ body {
 }
 
 .agradecimento-titulo {
-    width: 100%;
-    text-align: left;
-    font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 32px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 34px;
     font-weight: bold;
-    color: #111;
-    margin: 0 0 8px 0;
-    letter-spacing: 0.01em;
-    background: none;
-    padding: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .agradecimento-texto.agradecimento-azul {
@@ -427,6 +508,17 @@ body {
     }
     .pastor-slogan {
         font-size: 18px;
+    }
+    .agradecimento-pastor {
+        width: 120% !important;
+        min-width: 0 !important;
+        max-width: 100vw !important;
+        margin-right: 0 !important;
+    }
+    .pastor-img {
+        width: 120% !important;
+        height: auto !important;
+        max-width: 100vw !important;
     }
 }
 
@@ -864,6 +956,24 @@ body {
         margin-top: 6px;
         width: 100%;
     }
+    .faixa-vermelha-conteudo {
+        font-size: 16px !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        word-break: break-word;
+        padding: 14px 8px 14px 8px !important;
+    }
+    .agradecimento-pastor {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+    }
+    .pastor-img {
+        width: 120% !important;
+        height: auto !important;
+        max-width: 100vw !important;
+    }
 }
 
 .header-img-only { display: none !important; }
@@ -1222,8 +1332,8 @@ body {
 }
 
 .provedores-img {
-    max-width: 600px;
     width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -1246,55 +1356,143 @@ body {
 .areas-title {
     color: #e50909;
     font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 38px;
+    font-size: 2.1em;
     font-weight: bold;
     text-align: center;
     margin-bottom: 18px;
     line-height: 1.08;
+    text-shadow: 1px 1px 2px #fff6;
+}
+
+.areas-impacto {
+    text-align: center;
+    font-size: 1.2em;
+    color: #0a2a5a;
+    margin-bottom: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.areas-impacto span {
+    background: #ffe600;
+    padding: 4px 12px;
+    border-radius: 8px;
+    animation: impactoPulse 1.2s infinite alternate;
+    box-shadow: 0 2px 8px #ffe60055;
+}
+
+@keyframes impactoPulse {
+    0% { background: #ffe600; }
+    100% { background: #fffbe7; }
 }
 
 .areas-listas {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 56px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .areas-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 36px;
-    font-weight: 600;
-    color: #17507a;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
 }
 
-.check-icon {
-    font-size: 44px;
+.areas-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.3em;
+    font-weight: 600;
+    background: #fffbe7;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    box-shadow: 0 2px 8px #0001;
+    transition: background 0.2s, transform 0.2s;
+    cursor: pointer;
+    animation: bounceIn 0.7s both;
+    width: 90%;
+    max-width: 420px;
+    justify-content: flex-start;
+}
+.areas-list li:nth-child(even) {
+    background: #f0f8ff;
+}
+.areas-list li:hover {
+    background: #ffe600;
+    transform: scale(1.03) translateX(8px);
+}
+.areas-list li .check-icon {
+    font-size: 2em;
     color: #0bb20b;
-    vertical-align: middle;
-    margin-right: 8px;
+    animation: pulse 1.2s infinite alternate;
+    flex-shrink: 0;
 }
 
-@media (max-width: 900px) {
-    .areas-title {
-        font-size: 22px;
+@keyframes pulse {
+    to { color: #1ed760; transform: scale(1.2);}
+}
+@keyframes bounceIn {
+    0% { opacity: 0; transform: translateY(30px) scale(0.8);}
+    60% { opacity: 1; transform: translateY(-10px) scale(1.05);}
+    100% { opacity: 1; transform: translateY(0) scale(1);}
+}
+
+/* Animação em cascata para os itens da lista */
+.areas-list li:nth-child(1) { animation-delay: 0.1s; }
+.areas-list li:nth-child(2) { animation-delay: 0.2s; }
+.areas-list li:nth-child(3) { animation-delay: 0.3s; }
+.areas-list li:nth-child(4) { animation-delay: 0.4s; }
+.areas-list li:nth-child(5) { animation-delay: 0.5s; }
+.areas-list li:nth-child(6) { animation-delay: 0.6s; }
+
+@media (max-width: 700px) {
+    .areas-list li {
+        font-size: 1em;
+        width: 98%;
+        max-width: 98vw;
+        padding: 10px 6px;
     }
     .areas-listas {
-        flex-direction: column;
-        gap: 18px;
-        align-items: center;
+        max-width: 98vw;
     }
-    .areas-list {
-        font-size: 18px;
-    }
-    .check-icon {
-        font-size: 28px;
-    }
+}
+
+.container-padrao {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+  .areas-listas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 48px;
+    max-width: 1100px;
+    align-items: start;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .areas-list {
+    width: 100%;
+    max-width: 100%;
+    gap: 36px;
+  }
+  .areas-list li {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 0;
+  }
 } 

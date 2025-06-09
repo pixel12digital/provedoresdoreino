@@ -9,12 +9,16 @@
 <body>
     <header class="main-header">
         <div class="header-desktop desktop-only">
-            <img src="assets/images/header.png" alt="O Anel de Salomão - Desktop" class="header-img-desktop">
+            <picture>
+                <img src="assets/images/header.png" alt="O Anel de Salomão - Desktop" class="header-img-desktop" width="1400" height="180" loading="lazy">
+            </picture>
         </div>
         <div class="header-mobile mobile-only">
             <div class="header-mobile-container">
                 <div class="header-mobile-anel header-mobile-anel-fem">
-                    <img src="assets/images/anel-feminino.png" alt="Anel Feminino">
+                    <picture>
+                        <img src="assets/images/anel-feminino.png" alt="Anel Feminino" width="90" height="120" loading="lazy">
+                    </picture>
                     <div class="header-mobile-label">FEMININO</div>
                 </div>
                 <div class="header-mobile-center">
@@ -22,14 +26,16 @@
                     <div class="header-mobile-sub">OS PROVEDORES DO REINO</div>
                 </div>
                 <div class="header-mobile-anel header-mobile-anel-masc">
-                    <img src="assets/images/anel-masculino.png" alt="Anel Masculino">
+                    <picture>
+                        <img src="assets/images/anel-masculino.png" alt="Anel Masculino" width="90" height="120" loading="lazy">
+                    </picture>
                     <div class="header-mobile-label">MASCULINO</div>
                 </div>
             </div>
         </div>
     </header>
     <div class="doacao-container">
-        <a href="#" class="btn-doacao">
+        <a href="doacao.html" class="btn-doacao">
             <span class="icon-lupa">
                 <img src="assets/images/lupa.svg" alt="Lupa" class="img-lupa">
             </span>
@@ -70,7 +76,9 @@
     <section class="agradecimento-section">
         <div class="agradecimento-content agradecimento-linha">
             <div class="agradecimento-pastor">
-                <img src="assets/images/Imagem01.png" alt="Pr. Hideraldo Pagliarin" class="pastor-img">
+                <picture>
+                    <img src="assets/images/Imagem01.png" alt="Pr. Hideraldo Pagliarin" class="pastor-img" width="420" height="520">
+                </picture>
             </div>
             <div class="agradecimento-bloco-direita">
                 <div class="agradecimento-titulo">
@@ -92,7 +100,9 @@
     <section class="jesus-video-section" style="margin-top: 48px;">
         <div class="jesus-video-container">
             <div class="jesus-col jesus-img-col">
-                <img src="assets/images/jesus.png" alt="Jesus" class="jesus-img" style="width:100%;height:auto;max-width:500px;display:block;margin:0 auto;">
+                <picture>
+                    <img src="assets/images/jesus.png" alt="Jesus" class="jesus-img" width="500" height="454" loading="lazy">
+                </picture>
             </div>
             <div class="jesus-col jesus-video-col">
                 <div class="jesus-video-title">Explicação porque você precisa se associar!</div>
@@ -118,19 +128,26 @@
                 </div>
             </div>
             <div class="anel-livro-col anel-livro-img-col">
-                <img src="assets/images/livro.png" alt="Livro Ouro de Oração" class="anel-livro-img">
+                <picture>
+                    <img src="assets/images/livro.png" alt="Livro Ouro de Oração" class="anel-livro-img" width="220" height="320" loading="lazy">
+                </picture>
             </div>
         </div>
     </section>
     <section class="provedores-section" style="margin-top: 48px;">
-        <div class="provedores-container">
-            <img src="assets/images/provedores.png" alt="Provedores do Reino" class="provedores-img" style="display:block;margin:0 auto;max-width:100%;height:auto;">
+        <div class="container-padrao">
+            <picture>
+                <img src="assets/images/provedores.png" alt="Provedores do Reino" class="provedores-img" loading="lazy">
+            </picture>
         </div>
     </section>
     <section class="areas-section" style="margin-top: 32px;">
         <div class="areas-container">
             <div class="areas-title">
                 Como Associado ao Projeto "Os Provedores do Reino" você vai nos ajudar a Investir Financeiramente nas seguintes áreas:
+            </div>
+            <div class="areas-impacto">
+                <span>Juntos, vamos transformar vidas!</span>
             </div>
             <div class="areas-listas">
                 <ul class="areas-list">
@@ -156,5 +173,175 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+
+    <!-- Popup de Doação -->
+    <style>
+    #popupDoacaoBg {
+      position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.7); z-index: 9999; display: none; align-items: center; justify-content: center;
+    }
+    #popupDoacao {
+      background: linear-gradient(135deg, #0a2a5a 0%, #17507a 60%, #1e3c72 100%);
+      color: #fff;
+      border-radius: 18px;
+      max-width: 600px;
+      width: 95vw;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+      padding: 0 0 36px 0;
+      text-align: center;
+      position: relative;
+      font-family: 'Montserrat', Arial, sans-serif;
+      aspect-ratio: 16/9;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    #popupDoacao .fechar {
+      position: absolute; top: 16px; right: 16px;
+      width: 48px; height: 48px;
+      background: #fff; color: #b00; border: 2px solid #b00;
+      border-radius: 50%; font-size: 2.2rem; font-weight: bold;
+      cursor: pointer; z-index: 10001; display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, border 0.2s;
+    }
+    #popupDoacao .fechar:hover { background: #ffe600; border-color: #ffe600; color: #0a2a5a; }
+    #popupDoacao .titulo-ato-amor {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.6rem;
+      font-weight: bold;
+      color: #ffe600;
+      margin: 40px 0 0 0;
+      text-shadow: 1px 1px 2px #222;
+    }
+    #popupDoacao .sub-amarelo {
+      background: #ffe600;
+      color: #0e2a5a;
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 10px 0;
+      border-radius: 6px;
+      margin: 18px 0 28px 0;
+    }
+    #popupDoacao .cora-qr {
+      margin: 0 auto 28px auto;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #popupDoacao .cora-qr img {
+      width: 300px; height: auto; display: block;
+    }
+    #popupDoacao .copy-azul {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ffe600;
+      margin-bottom: 16px;
+      text-shadow: 1px 1px 2px #222;
+    }
+    #popupDoacao .copy-branco {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    #popupDoacao .copy-pix {
+      font-size: 1.2rem;
+      background: #fff;
+      color: #0e2a5a;
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-family: monospace;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    #popupDoacao .copy-cartao {
+      color: #ffe600;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 16px 0 0 0;
+    }
+    #popupDoacao .logo-pazvida {
+      margin-top: 32px;
+    }
+    #popupDoacao .logo-pazvida img {
+      width: 140px; display: block; margin: 0 auto 10px auto;
+    }
+    #popupDoacao .logo-pazvida span {
+      display: block;
+      font-size: 1.2rem;
+      color: #ffe600;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #222;
+    }
+    #popupDoacao .pix-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    #popupDoacao .btn-copiar {
+      background: #ffe600;
+      color: #0a2a5a;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 16px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #popupDoacao .btn-copiar.copiado {
+      background: #0bb20b;
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      #popupDoacao { max-width: 98vw; padding-bottom: 18px; }
+      #popupDoacao .titulo-ato-amor { font-size: 1.3rem; margin-top: 18px; }
+      #popupDoacao .sub-amarelo { font-size: 1rem; padding: 6px 0; margin: 10px 0 14px 0; }
+      #popupDoacao .cora-qr img { width: 90vw; max-width: 220px; }
+      #popupDoacao .copy-azul, #popupDoacao .copy-branco, #popupDoacao .copy-cartao { font-size: 1rem; }
+      #popupDoacao .copy-pix { font-size: 1rem; padding: 4px 8px; }
+      #popupDoacao .logo-pazvida img { width: 90px; }
+      #popupDoacao .logo-pazvida span { font-size: 1rem; }
+    }
+    </style>
+    <div id="popupDoacaoBg">
+      <div id="popupDoacao">
+        <button class="fechar" onclick="document.getElementById('popupDoacaoBg').style.display='none'">&times;</button>
+        <div class="titulo-ato-amor">Um Ato de Amor!</div>
+        <div class="sub-amarelo">É SÓ FOTOGRAFAR O QR CODE!</div>
+        <div class="cora-qr">
+          <img src="assets/images/qrcode.png" alt="QR Code Pix">
+        </div>
+        <div class="copy-azul">VOCÊ TRANSFERE A SUA OFERTA<br>E ABENÇOA A IGREJA DE CRISTO!</div>
+        <div class="copy-branco">PODE SER PELO PIX<br>
+          <div class="pix-row">
+            <span class="copy-pix" id="popupPixKey">PVALCANCANDOVIDAS@GMAIL.COM</span>
+            <button class="btn-copiar" id="btnPopupCopiar">Copiar</button>
+          </div>
+        </div>
+        <div class="copy-cartao">OU AINDA PELO CARTÃO<br>ATRAVÉS DO LINK DE PAGAMENTO</div>
+        <div class="logo-pazvida">
+          <a href="#pagamento-cartao" target="_blank" style="display:inline-block;margin-top:12px;font-size:1.2rem;font-weight:bold;color:#ffe600;background:#17507a;padding:12px 28px;border-radius:8px;text-decoration:none;box-shadow:0 2px 8px #0002;">PAGAR COM CARTÃO DE CRÉDITO</a>
+        </div>
+      </div>
+    </div>
+    <script>
+    document.querySelector('.btn-doacao').onclick = function(e) {
+      e.preventDefault();
+      document.getElementById('popupDoacaoBg').style.display = 'flex';
+    };
+    document.getElementById('btnPopupCopiar').onclick = function() {
+      const chave = document.getElementById('popupPixKey').innerText;
+      navigator.clipboard.writeText(chave).then(() => {
+        this.classList.add('copiado');
+        this.innerText = 'Copiado!';
+        setTimeout(() => {
+          this.classList.remove('copiado');
+          this.innerText = 'Copiar';
+        }, 1800);
+      });
+    };
+    </script>
 </body>
 </html> 
