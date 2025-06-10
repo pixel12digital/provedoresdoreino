@@ -1,7 +1,72 @@
+/* ===== VARIÁVEIS CSS ===== */
+:root {
+  /* Cores principais */
+  --cor-primaria: #0a2a5a;
+  --cor-secundaria: #17507a;
+  --cor-accent: #ffe600;
+  --cor-vermelha: #e50909;
+  --cor-verde: #0bb20b;
+  --cor-branca: #ffffff;
+  --cor-preta: #000000;
+  
+  /* Gradientes */
+  --gradiente-azul: linear-gradient(135deg, #0a2a5a 0%, #17507a 60%, #1e3c72 100%);
+  --gradiente-popup: linear-gradient(135deg, #0a2a5a 0%, #17507a 60%, #1e3c72 100%);
+  
+  /* Fontes */
+  --fonte-principal: 'Montserrat', Arial, sans-serif;
+  --fonte-secundaria: 'Arial Black', Arial, sans-serif;
+  --fonte-mono: monospace;
+  
+  /* Tamanhos de fonte */
+  --fonte-xs: 0.9rem;
+  --fonte-sm: 1rem;
+  --fonte-md: 1.1rem;
+  --fonte-lg: 1.2rem;
+  --fonte-xl: 1.5rem;
+  --fonte-2xl: 1.8rem;
+  --fonte-3xl: 2.2rem;
+  --fonte-4xl: 2.4rem;
+  
+  /* Espaçamentos */
+  --espaco-xs: 4px;
+  --espaco-sm: 8px;
+  --espaco-md: 12px;
+  --espaco-lg: 16px;
+  --espaco-xl: 20px;
+  --espaco-2xl: 24px;
+  --espaco-3xl: 32px;
+  --espaco-4xl: 40px;
+  --espaco-5xl: 48px;
+  
+  /* Bordas */
+  --borda-radius-sm: 6px;
+  --borda-radius-md: 8px;
+  --borda-radius-lg: 12px;
+  --borda-radius-xl: 20px;
+  --borda-radius-2xl: 24px;
+  
+  /* Sombras */
+  --sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --sombra-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --sombra-lg: 0 8px 40px rgba(0, 0, 0, 0.3);
+  
+  /* Transições */
+  --transicao-rapida: all 0.2s ease;
+  --transicao-normal: all 0.3s ease;
+  --transicao-lenta: all 0.5s ease;
+  
+  /* Z-index */
+  --z-popup: 9999;
+  --z-popup-botao: 10001;
+}
+
+/* ===== RESET E BASE ===== */
 body {
     margin: 0;
     padding: 0;
     background: #f9d898;
+    font-family: var(--fonte-principal);
 }
 
 .main-header {
@@ -1494,5 +1559,444 @@ body {
     max-width: 100%;
     width: 100%;
     margin-bottom: 0;
+  }
+}
+
+/* ===== POPUP DE DOAÇÃO ===== */
+#popupDoacaoBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: var(--z-popup);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+#popupDoacao {
+  background: var(--gradiente-popup);
+  color: var(--cor-branca);
+  border-radius: var(--borda-radius-xl);
+  max-width: 600px;
+  width: 95vw;
+  box-shadow: var(--sombra-lg);
+  padding: 0;
+  text-align: center;
+  position: relative;
+  font-family: var(--fonte-principal);
+  overflow: hidden;
+}
+
+/* Botão de fechar */
+#popupDoacao .fechar {
+  position: absolute;
+  top: var(--espaco-lg);
+  right: var(--espaco-lg);
+  width: 48px;
+  height: 48px;
+  background: var(--cor-branca);
+  color: var(--cor-vermelha);
+  border: 3px solid var(--cor-vermelha);
+  border-radius: 50%;
+  font-size: var(--fonte-2xl);
+  font-weight: bold;
+  cursor: pointer;
+  z-index: var(--z-popup-botao);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transicao-normal);
+  box-shadow: var(--sombra-sm);
+}
+
+#popupDoacao .fechar:hover {
+  background: var(--cor-accent);
+  border-color: var(--cor-accent);
+  color: var(--cor-primaria);
+  transform: scale(1.1);
+}
+
+/* Layout do popup */
+#popupDoacao .popup-flex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: var(--espaco-4xl) var(--espaco-2xl) var(--espaco-2xl) var(--espaco-2xl);
+  box-sizing: border-box;
+}
+
+#popupDoacao .popup-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Coluna do QR Code */
+#popupDoacao .popup-qr {
+  margin-bottom: var(--espaco-2xl);
+}
+
+#popupDoacao .sub-amarelo {
+  background: var(--cor-accent);
+  color: var(--cor-primaria);
+  font-weight: bold;
+  font-size: var(--fonte-lg);
+  padding: var(--espaco-md) var(--espaco-lg);
+  border-radius: var(--borda-radius-md);
+  margin-bottom: var(--espaco-xl);
+  text-align: center;
+  box-shadow: var(--sombra-sm);
+}
+
+#popupDoacao .cora-qr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--espaco-xl);
+}
+
+#popupDoacao .cora-qr img {
+  width: 200px;
+  height: auto;
+  display: block;
+  border: 4px solid var(--cor-branca);
+  border-radius: var(--borda-radius-lg);
+  box-shadow: var(--sombra-md);
+  background: var(--cor-branca);
+}
+
+/* Coluna das informações */
+#popupDoacao .popup-info {
+  text-align: center;
+}
+
+#popupDoacao .popup-info-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-lg);
+  align-items: center;
+}
+
+#popupDoacao .titulo-ato-amor {
+  font-family: var(--fonte-principal);
+  font-size: var(--fonte-3xl);
+  font-weight: bold;
+  color: var(--cor-accent);
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.1;
+}
+
+#popupDoacao .copy-azul {
+  font-size: var(--fonte-md);
+  font-weight: bold;
+  color: var(--cor-accent);
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+#popupDoacao .copy-branco {
+  font-size: var(--fonte-md);
+  font-weight: bold;
+  color: var(--cor-branca);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Campo PIX */
+#popupDoacao .pix-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--espaco-md);
+  margin: var(--espaco-md) 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#popupDoacao .copy-pix {
+  font-size: var(--fonte-sm);
+  background: var(--cor-branca);
+  color: var(--cor-primaria);
+  border-radius: var(--borda-radius-sm);
+  padding: var(--espaco-md) var(--espaco-md);
+  font-family: var(--fonte-mono);
+  display: inline-block;
+  border: 1px solid #ddd;
+  max-width: 100%;
+  min-width: 260px;
+  width: auto;
+  overflow-x: auto;
+  white-space: normal;
+  word-break: break-all;
+  text-align: left;
+}
+
+#popupDoacao .btn-copiar {
+  background: var(--cor-accent);
+  color: var(--cor-primaria);
+  border: none;
+  border-radius: var(--borda-radius-sm);
+  padding: var(--espaco-md) var(--espaco-lg);
+  font-size: var(--fonte-sm);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transicao-normal);
+  white-space: nowrap;
+  margin-left: var(--espaco-sm);
+}
+
+#popupDoacao .btn-copiar:hover {
+  background: var(--cor-verde);
+  color: var(--cor-branca);
+  transform: scale(1.05);
+}
+
+#popupDoacao .btn-copiar.copiado {
+  background: var(--cor-verde);
+  color: var(--cor-branca);
+}
+
+#popupDoacao .copy-cartao {
+  color: var(--cor-accent);
+  font-size: var(--fonte-sm);
+  font-weight: bold;
+  margin: var(--espaco-md) 0;
+  line-height: 1.2;
+}
+
+#popupDoacao .btn-cartao {
+  background: var(--cor-secundaria);
+  color: var(--cor-accent);
+  text-decoration: none;
+  padding: var(--espaco-md) var(--espaco-2xl);
+  border-radius: var(--borda-radius-md);
+  font-size: var(--fonte-sm);
+  font-weight: bold;
+  display: inline-block;
+  margin-top: var(--espaco-md);
+  transition: var(--transicao-normal);
+  box-shadow: var(--sombra-sm);
+}
+
+#popupDoacao .btn-cartao:hover {
+  background: var(--cor-accent);
+  color: var(--cor-secundaria);
+  transform: scale(1.05);
+}
+
+/* ===== LAYOUT DESKTOP (16:9) ===== */
+@media (min-width: 900px) {
+  #popupDoacao {
+    max-width: 900px;
+    width: 90vw;
+    max-height: 90vh;
+    aspect-ratio: 16/9;
+    border-radius: var(--borda-radius-2xl);
+  }
+
+  #popupDoacao .popup-flex {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0;
+    gap: 0;
+    height: 100%;
+  }
+
+  #popupDoacao .popup-col {
+    flex: 1 1 0;
+    max-width: 50%;
+    height: 100%;
+    padding: var(--espaco-5xl) var(--espaco-4xl);
+    box-sizing: border-box;
+  }
+
+  #popupDoacao .popup-qr {
+    border-right: 2px solid var(--cor-secundaria);
+    margin-bottom: 0;
+    padding-right: var(--espaco-3xl);
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-3xl);
+  }
+
+  #popupDoacao .popup-info {
+    padding-left: var(--espaco-3xl);
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  #popupDoacao .popup-info-inner {
+    align-items: flex-start;
+    gap: var(--espaco-xl);
+    width: 100%;
+  }
+
+  #popupDoacao .cora-qr img {
+    width: 180px;
+    max-width: 100%;
+  }
+
+  #popupDoacao .sub-amarelo {
+    font-size: var(--fonte-md);
+    padding: var(--espaco-md) var(--espaco-md);
+    margin-bottom: 0;
+    max-width: 220px;
+  }
+
+  #popupDoacao .titulo-ato-amor {
+    font-size: var(--fonte-4xl);
+    margin-bottom: var(--espaco-md);
+  }
+
+  #popupDoacao .copy-azul {
+    font-size: var(--fonte-md);
+    margin-bottom: var(--espaco-xs);
+  }
+
+  #popupDoacao .copy-branco {
+    font-size: var(--fonte-sm);
+    margin-bottom: var(--espaco-xs);
+  }
+
+  #popupDoacao .copy-cartao {
+    font-size: var(--fonte-sm);
+    margin: var(--espaco-md) 0;
+  }
+
+  #popupDoacao .pix-row {
+    justify-content: flex-start;
+    margin: var(--espaco-md) 0;
+    width: 100%;
+  }
+
+  #popupDoacao .copy-pix {
+    max-width: 180px;
+    font-size: var(--fonte-xs);
+    padding: var(--espaco-sm) var(--espaco-md);
+  }
+
+  #popupDoacao .btn-copiar {
+    font-size: var(--fonte-xs);
+    padding: var(--espaco-sm) var(--espaco-md);
+  }
+
+  #popupDoacao .btn-cartao {
+    width: 100%;
+    text-align: center;
+    font-size: var(--fonte-sm);
+    padding: var(--espaco-md) 0;
+    margin-top: var(--espaco-md);
+  }
+
+  #popupDoacao .fechar {
+    top: var(--espaco-xl);
+    right: var(--espaco-xl);
+    width: 52px;
+    height: 52px;
+    font-size: var(--fonte-3xl);
+  }
+}
+
+/* ===== RESPONSIVIDADE MOBILE ===== */
+@media (max-width: 899px) {
+  #popupDoacao {
+    max-width: 95vw;
+    padding: 0;
+  }
+
+  #popupDoacao .popup-flex {
+    padding: var(--espaco-3xl) var(--espaco-xl) var(--espaco-2xl) var(--espaco-xl);
+  }
+
+  #popupDoacao .titulo-ato-amor {
+    font-size: var(--fonte-2xl);
+  }
+
+  #popupDoacao .sub-amarelo {
+    font-size: var(--fonte-sm);
+    padding: var(--espaco-md) var(--espaco-md);
+  }
+
+  #popupDoacao .cora-qr img {
+    width: 160px;
+  }
+
+  #popupDoacao .copy-azul,
+  #popupDoacao .copy-branco,
+  #popupDoacao .copy-cartao {
+    font-size: var(--fonte-sm);
+  }
+
+  #popupDoacao .copy-pix {
+    font-size: var(--fonte-xs);
+    max-width: 150px;
+  }
+
+  #popupDoacao .btn-copiar {
+    font-size: var(--fonte-xs);
+  }
+
+  #popupDoacao .btn-cartao {
+    font-size: var(--fonte-xs);
+    padding: var(--espaco-md) var(--espaco-xl);
+  }
+
+  #popupDoacao .fechar {
+    width: 44px;
+    height: 44px;
+    font-size: var(--fonte-2xl);
+    top: var(--espaco-md);
+    right: var(--espaco-md);
+  }
+
+  #popupDoacao .pix-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--espaco-sm);
+  }
+  #popupDoacao .copy-pix {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+  #popupDoacao .btn-copiar {
+    margin-left: 0;
+    margin-top: var(--espaco-xs);
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #popupDoacao .popup-flex {
+    padding: var(--espaco-2xl) var(--espaco-lg) var(--espaco-xl) var(--espaco-lg);
+  }
+
+  #popupDoacao .titulo-ato-amor {
+    font-size: var(--fonte-xl);
+  }
+
+  #popupDoacao .cora-qr img {
+    width: 140px;
+  }
+
+  #popupDoacao .pix-row {
+    flex-direction: column;
+    gap: var(--espaco-md);
+  }
+
+  #popupDoacao .copy-pix {
+    max-width: 100%;
+    text-align: center;
   }
 } 
